@@ -4,8 +4,8 @@
 ; Instead, copy it, edit named.conf, and use that copy.
 ;
 $TTL	86400
-@	IN	SOA	ns.bind.test. root.localhost. (
-			      2		; Serial
+@	IN	SOA	router.bind.test. root.localhost. (
+			      3		; Serial
 			     3h		; Refresh
 			     1h		; Retry
 			     1w		; Expire
@@ -13,5 +13,4 @@ $TTL	86400
 ;
 @	IN	NS	localhost.
 
-ns.bind.test.	IN A	192.168.122.217
-oi.bind.test.	IN A	4.3.2.1
+router.bind.test.	IN A	192.168.0.1
