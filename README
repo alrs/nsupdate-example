@@ -1,0 +1,10 @@
+dynamic update of A records:
+
+lars@bind1:/tmp/bind$ sudo nsupdate -l
+> update add lars.bind.test 10 A 10.14.19.74
+> send
+> quit
+lars@bind1:/tmp/bind$ dig +short lars.bind.test
+10.14.19.74
+
+
