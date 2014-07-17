@@ -7,4 +7,10 @@ lars@bind1:/tmp/bind$ sudo nsupdate -l
 lars@bind1:/tmp/bind$ dig +short lars.bind.test
 10.14.19.74
 
+lars@bind1:/tmp/bind$ sudo nsupdate -l
+> update add 2.0.168.192.in-addr.arpa 600 PTR dynamic.bind.test
+> send
+> quit
+lars@bind1:/tmp/bind$ host 192.168.0.2
+2.0.168.192.in-addr.arpa domain name pointer dynamic.bind.test.
 
