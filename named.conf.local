@@ -1,0 +1,21 @@
+//
+// Do any local configuration here
+//
+
+// Consider adding the 1918 zones here, if they are not used in your
+// organization
+//include "/etc/bind/zones.rfc1918";
+
+zone "bind.test." {
+        type master;
+        journal "/dev/shm/db.bind.test.jnl";
+        file "/etc/bind/db.bind.test";
+        update-policy local;
+};
+
+zone "0.168.192.in-addr.arpa." {
+	type master;
+	journal "/dev/shm/db.192.168.0.jnl";
+	file "/etc/bind/db.192.168.0";
+	update-policy local;
+};
